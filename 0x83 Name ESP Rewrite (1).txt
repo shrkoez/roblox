@@ -53,11 +53,11 @@ local function esp(p,cr)
         if hrp_onscreen then
             if TomatoWareSettings.PlayerESP.NamePosition == "up" then
             
-            text.Position = Vector2.new(hrp_pos.X, hrp_pos.Y - 6)
+            text.Position = Vector2.new(hrp_pos.X, hrp_pos.Y - 20)
             
            elseif TomatoWareSettings.PlayerESP.NamePosition == "down" then
            
-            text.Position = Vector2.new(hrp_pos.X, hrp_pos.Y + 6)
+            text.Position = Vector2.new(hrp_pos.X, hrp_pos.Y + 20)
            
            end
            
