@@ -51,11 +51,26 @@ local function esp(p,cr)
     c1 = rs.RenderStepped:Connect(function()
         local hrp_pos,hrp_onscreen = c:WorldToViewportPoint(hrp.Position)
         if hrp_onscreen then
-            text.Position = Vector2.new(hrp_pos.X, hrp_pos.Y)
-            text.Text = p.Name
+            if TomatoWareSettings.PlayerESP.NamePosition == "up" then
+            
+            text.Position = Vector2.new(hrp_pos.X, hrp_pos.Y - 6)
+            
+           elseif TomatoWareSettings.PlayerESP.NamePosition == "down" then
+           
+            text.Position = Vector2.new(hrp_pos.X, hrp_pos.Y + 6)
+           
+           end
+           
+            text.Text = p.Name -- player name
+            
+            if TomatoWareSettings.PlayerESP.NameESP == true then
+            
             text.Visible = true
+            
         else
+        
             text.Visible = false
+            
         end
     end)
 end
