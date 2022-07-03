@@ -1,3 +1,4 @@
+
 local lplr = game.Players.LocalPlayer
 local camera = game:GetService("Workspace").CurrentCamera
 local CurrentCamera = workspace.CurrentCamera
@@ -17,12 +18,7 @@ for i,v in pairs(game.Players:GetChildren()) do
 
     local Box = Drawing.new("Square")
     Box.Visible = false
-  if 1+1 == 2 then
-   	
-   	wait(0.05)
-   	Box.Color = TomatoWareSettings.PlayerESP.BoxColor
-    
-   end
+    Box.Color = Color3.new(1,1,1)
     Box.Thickness = 1
     Box.Transparency = 1
     Box.Filled = false
@@ -42,15 +38,15 @@ for i,v in pairs(game.Players:GetChildren()) do
                     BoxOutline.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
                     BoxOutline.Position = Vector2.new(RootPosition.X - BoxOutline.Size.X / 2, RootPosition.Y - BoxOutline.Size.Y / 2)
                     BoxOutline.Visible = TomatoWareSettings.PlayerESP.BoxESP
+					BoxOutline.Color = TomatoWareSettings.PlayerESP.BoxOutlineColor
 
                     Box.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
                     Box.Position = Vector2.new(RootPosition.X - Box.Size.X / 2, RootPosition.Y - Box.Size.Y / 2)
                     Box.Visible = TomatoWareSettings.PlayerESP.BoxESP
+                    Box.Color = TomatoWareSettings.PlayerESP.BoxColor
                 else
                     BoxOutline.Visible = false
                     Box.Visible = false
-                    HealthBarOutline.Visible = false
-                    HealthBar.Visible = false
                 end
             else
                 BoxOutline.Visible = false
@@ -71,14 +67,7 @@ game.Players.PlayerAdded:Connect(function(v)
 
     local Box = Drawing.new("Square")
     Box.Visible = false
-    
-   if 1+1 == 2 then
-   	
-   	wait(0.05)
-   	Box.Color = TomatoWareSettings.PlayerESP.BoxColor
-    
-   end
-   
+   	Box.Color = Color3.new(1,1,1)
     Box.Thickness = 1
     Box.Transparency = 1
     Box.Filled = false
@@ -98,10 +87,12 @@ game.Players.PlayerAdded:Connect(function(v)
                     BoxOutline.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
                     BoxOutline.Position = Vector2.new(RootPosition.X - BoxOutline.Size.X / 2, RootPosition.Y - BoxOutline.Size.Y / 2)
                     BoxOutline.Visible = TomatoWareSettings.PlayerESP.BoxESP
+					BoxOutline.Color = TomatoWareSettings.PlayerESP.BoxOutlineColor
 
                     Box.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
                     Box.Position = Vector2.new(RootPosition.X - Box.Size.X / 2, RootPosition.Y - Box.Size.Y / 2)
                     Box.Visible = TomatoWareSettings.PlayerESP.BoxESP
+                    Box.Color = TomatoWareSettings.PlayerESP.BoxColor
                 else
                     BoxOutline.Visible = false
                     Box.Visible = false
